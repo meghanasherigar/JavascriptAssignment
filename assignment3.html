@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" name="str"  id="str" placeholder="Enter a sentence">
+<button onclick="FirstReverse(document.getElementById('str').value)">Click
+</button>
+<p id="reverseString">Reversed string is========================</p>
+<script>
+function FirstReverse(str) {
+  console.log(str);
+  var length=0;
+  var reversedString="";
+    while(str[length]!=undefined){
+	length++;
+  }
+  for(var i=length-1;i>=0 ;i--){
+  	reversedString+=str[i];
+  }
+  document.getElementById("reverseString").innerHTML += reversedString;
+}
+</script>
+</body>
+</html> 
