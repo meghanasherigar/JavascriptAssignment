@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" name="sentence"  id="sentence" placeholder="Enter a sentence">
+<button onclick="LongestWord()">Click
+</button>
+<p id="wordId">Largest word is=============</p>
+<p id="lengthId">Length word is=============</p>
+<script>
+function LongestWord() {
+  var sentence=document.getElementById('sentence').value;
+   var str = sentence.split(" ");
+    var longest = 0;
+    var word = null;
+	for (var i = 0; i < str.length; i++) {
+        if (longest < str[i].length) {
+            longest = str[i].length;
+            word = str[i];
+        }
+    }
+	document.getElementById("wordId").innerHTML += word;
+	document.getElementById("lengthId").innerHTML += longest;
+
+}
+</script>
+</body>
+</html> 
